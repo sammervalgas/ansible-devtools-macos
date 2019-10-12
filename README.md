@@ -48,9 +48,11 @@ cd ansible-devtools-macos
 ansible-playbook -i inventory/hosts provision.yml
 
 # For a specific tool
-ansible-playbook -i inventory/hosts provision.yml --tags java
 ansible-playbook -i inventory/hosts provision.yml --tags nodejs
 
+# To Run via node
+npm run provision
+npm run provision -- --tags java
 ```
 
 Author
