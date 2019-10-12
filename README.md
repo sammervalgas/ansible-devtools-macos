@@ -1,4 +1,4 @@
-Ansible Plybook DevTools (MACOS)
+Ansible Playbook DevTools (MACOS)
 ================
 
  > Note: Playbook was tested with yosemite and mojave macos versions.
@@ -6,9 +6,9 @@ Ansible Plybook DevTools (MACOS)
 Requirements
 ----------------
 
-* [Homebrew](#brew)
-* [Ansible >= 2.4](#ansible)
-* [Python](#python)
+* [Homebrew](https://brew.sh/index_pt-br)
+* [Ansible >= 2.4](https://www.ansible.com/resources/get-started)
+* [Python](https://www.python.org/)
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
