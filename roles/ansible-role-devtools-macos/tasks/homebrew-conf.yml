@@ -1,0 +1,5 @@
+---
+- name: 'Tap the Caskroom/Cask repository from Github using HTTPS'
+  homebrew_tap:
+    name: caskroom/cask
+    state: present

@@ -1,0 +1,8 @@
+---
+zsh_pref:
+  home: $HOME/.oh-my-zsh
+  theme: awesomepanda
+  plugins:
+    - git
+    - zsh-syntax-highlighting
+    - zsh-autosuggestions

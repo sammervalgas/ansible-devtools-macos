@@ -1,0 +1,5 @@
+---
+- name: 'Install Terminal Iterm2'
+  homebrew_cask:
+    name: iterm2
+    state: present

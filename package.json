@@ -1,0 +1,24 @@
+{
+  "name": "ansible-devtools-macos",
+  "version": "1.0.0",
+  "description": "Ansible playbook devtools for developers (MACOS)",
+  "scripts": {
+    "provision": "ansible-playbook -i inventory/hosts provision.yml -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammervalgas/ansible-devtools-macos.git"
+  },
+  "keywords": [
+    "ansible",
+    "devtools",
+    "macos",
+    "tools"
+  ],
+  "author": "Sammer Valgas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammervalgas/ansible-devtools-macos/issues"
+  },
+  "homepage": "https://github.com/sammervalgas/ansible-devtools-macos#readme"
+}

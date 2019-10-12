@@ -1,0 +1,8 @@
+[localhost:vars]
+ansible_host=127.0.0.1
+ansible_connection=local
+ansible_port=22
+
+
+[localhost]
+127.0.0.1

@@ -1,0 +1,19 @@
+---
+- name: Check npm is installed
+  shell: npm -v
+  register: npm_version
+
+- block:
+  - name: Install cordova
+    npm:
+      name: cordova
+      state: present
+      global: yes
+
+  - name: Install ionic
+    npm:
+      name: ionic
+      state: present
+      global: yes
+
+  when: npm_version.stdout is defined

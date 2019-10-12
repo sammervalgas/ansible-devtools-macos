@@ -1,0 +1,10 @@
+---
+- name: 'Install bash-completion'
+  homebrew:
+    name: bash-completion
+    state: present
+
+- name: 'Install docker'
+  homebrew_cask:
+    name: docker
+    state: present

@@ -1,0 +1,42 @@
+---
+##tasks file for jcati.iac_devtools
+- block:
+  - import_tasks: homebrew-conf.yml
+    tags: brew
+
+  - import_tasks: atom.yml
+    tags:
+      - atom
+
+  - import_tasks: visual-studio-code.yml
+    tags:
+      - visual-studio-code
+
+  tags: ides
+
+- import_tasks: iterm2.yml
+  tags: iterm2
+
+- import_tasks: oh_my_zsh.yml
+  tags: oh_my_zsh
+
+- import_tasks: docker.yml
+  tags: docker
+
+- import_tasks: java.yml
+  tags: java
+
+- import_tasks: nodejs.yml
+  tags: nodejs
+
+- import_tasks: ionic.yml
+  tags: ionic
+
+- import_tasks: git-config.yml
+  tags: git-config
+
+- import_tasks: virtualbox.yml
+  tags: virtualbox
+
+- import_tasks: spectacle.yml
+  tags: spectacle

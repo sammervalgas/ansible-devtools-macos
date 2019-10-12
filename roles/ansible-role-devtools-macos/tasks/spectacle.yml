@@ -1,0 +1,6 @@
+---
+- name: "Download Spectacle (For Resize Screen)"
+  get_url:
+    url: https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip
+    dest: "$HOME/Downloads"
+    mode: '0755'

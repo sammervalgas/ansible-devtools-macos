@@ -1,0 +1,24 @@
+---
+- name: Read all values from git config
+  git_config:
+    list_all: yes
+    scope: global
+  register: all_gitsconfig
+
+- debug:
+    msg: "{{all_gitconfig.config_values}}"
+
+- name: "Configure git commands shortcut"
+  git_config:
+    name: "{{item.n}}"
+    scope: "{{item.s}}"
+    value: "{{item.v}}"
+  with_items:
+    - {n: alias.a, s: global, v: '!git add .'}
+    - {n: alias.b, s: global, v: '!git branch'}
+    - {n: alias.c, s: global, v: '!git commit -m'}
+    - {n: alias.ar, s: global, v: '!git a . && git rma'} # Add all & remove all
+    - {n: alias.st, s: global, v: '!git status'}
+    - {n: alias.fp, s: global, v: '!git fetch && git pull'}
+    - {n: alias.rv, s: global, v: 'remote -v'}
+    - {n: alias.rma, s: global, v: "!git rm $(git status | grep deleted | awk '{print $3}')"} # Remove all

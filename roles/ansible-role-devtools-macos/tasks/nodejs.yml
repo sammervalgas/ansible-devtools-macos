@@ -1,0 +1,12 @@
+---
+- name: "Install NodeJS"
+  homebrew:
+    name: node
+    state: present
+
+- name: Display nodejs version
+  shell: node -v
+  register: node_version
+
+- debug:
+    msg: "NodeJS version installed is: {{node_version.stdout}}"

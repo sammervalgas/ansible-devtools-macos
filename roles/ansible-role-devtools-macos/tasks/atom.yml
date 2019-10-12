@@ -1,0 +1,6 @@
+---
+- name: 'Install Atom'
+  homebrew_cask:
+    name: atom
+    state: present
+    # update_homebrew: yes
