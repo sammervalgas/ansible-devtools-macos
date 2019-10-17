@@ -1,0 +1,5 @@
+---
+- name: Install intellij Idea "{{ (intellij_edition == 'ce') | ternary('Community','Ultimate') }}"
+  homebrew_cask:
+    name: "intellij-idea{{ (intellij_edition == 'ce') | ternary('-ce','') }}"
+    state: present

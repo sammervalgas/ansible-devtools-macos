@@ -28,15 +28,16 @@ This playbook contains a bunch of tools for developers:
 
 * atom
 * docker
-* nodejs
+* git-config (aliases)
+* intellij
 * ionic
 * iterm2
-* oh_my_zsh
 * java
+* nodejs
+* oh_my_zsh
 * spectacle
 * virtualbox
 * visual-studio-code
-* git-config (aliases)
 
 
 Example Runner

@@ -12,6 +12,9 @@
     tags:
       - visual-studio-code
 
+  - import_tasks: intellij.yml
+    tags: intellij
+
   tags: ides
 
 - import_tasks: iterm2.yml
