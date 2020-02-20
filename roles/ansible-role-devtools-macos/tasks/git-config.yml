@@ -3,7 +3,7 @@
   git_config:
     list_all: yes
     scope: global
-  register: all_gitsconfig
+  register: all_gitconfig
 
 - debug:
     msg: "{{all_gitconfig.config_values}}"
