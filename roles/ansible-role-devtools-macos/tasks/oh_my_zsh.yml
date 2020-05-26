@@ -1,4 +1,9 @@
 ---
+- name: Install z
+  homebrew:
+    name: z
+    state: present
+
 - name: "Ensure zsh is already installed"
   stat:
     path: "{{zsh_pref.home}}"

@@ -4,5 +4,6 @@ zsh_pref:
   theme: awesomepanda
   plugins:
     - git
+    - z
     - zsh-syntax-highlighting
     - zsh-autosuggestions
