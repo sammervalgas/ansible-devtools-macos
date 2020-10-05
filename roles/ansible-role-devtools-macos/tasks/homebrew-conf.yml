@@ -1,5 +1,11 @@
 ---
-- name: 'Tap the Caskroom/Cask repository from Github using HTTPS'
-  homebrew_tap:
-    name: caskroom/cask
-    state: present
+- block:
+  - name: 'Tap the Caskroom/Cask repository from Github using HTTPS'
+    homebrew_tap:
+      name: caskroom/cask
+      state: present
+  rescue: 
+    - name: 'Tap the Cask/Cask repository from Github using HTTPS'
+      homebrew_tap:
+        name: cask/cask
+        state: present
