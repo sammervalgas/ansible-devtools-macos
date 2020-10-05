@@ -5,7 +5,7 @@
       name: caskroom/cask
       state: present
   rescue: 
-    - name: 'Tap the Cask/Cask repository from Github using HTTPS'
-      homebrew_tap:
-        name: cask/cask
-        state: present
+  - name: 'Tap the Cask/Cask repository from Github using HTTPS'
+    homebrew_tap:
+      name: homebrew/cask-versions
+      state: present
