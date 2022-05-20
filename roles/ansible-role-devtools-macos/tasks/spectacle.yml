@@ -1,6 +1,6 @@
 ---
 - name: "Download Spectacle (For Resize Screen)"
   get_url:
-    url: https://github.com/eczarny/spectacle/releases/download/1.2/Spectacle+1.2.zip
+    url: 'https://github.com/eczarny/spectacle/releases/download/1.2/Spectacle+1.2.zip'
     dest: "$HOME/Downloads"
     mode: '0755'
