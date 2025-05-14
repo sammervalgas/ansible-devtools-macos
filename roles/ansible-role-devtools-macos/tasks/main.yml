@@ -43,3 +43,6 @@
 
 - import_tasks: spectacle.yml
   tags: spectacle
+
+- import_tasks: terraform.yml
+  tags: terraform

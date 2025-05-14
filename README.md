@@ -36,6 +36,7 @@ This playbook contains a bunch of tools for developers:
 * nodejs
 * oh_my_zsh
 * spectacle
+* terraform
 * virtualbox
 * visual-studio-code
 
@@ -46,10 +47,11 @@ Example Runner
 ```bash
 git clone https://github.com/sammervalgas/ansible-devtools-macos.git
 cd ansible-devtools-macos
-ansible-playbook -i inventory/hosts provision.yml
+ansible-playbook -i inventory/hosts provision.yml -K
 
 # For a specific tool
-ansible-playbook -i inventory/hosts provision.yml --tags nodejs
+ansible-playbook -i inventory/hosts provision.yml --tags nodejs -K
+ansible-playbook -i inventory/hosts provision.yml --tags terraform -K
 
 # To Run via node
 npm run provision

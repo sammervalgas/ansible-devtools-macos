@@ -1,0 +1,39 @@
+---
+- name: Verifica se o Homebrew está instalado
+  command: which brew
+  register: brew_check
+  changed_when: false
+  failed_when: false
+
+- name: Instala o Homebrew caso não esteja instalado
+  when: brew_check.rc != 0
+  block:
+    - name: Exibe mensagem sobre a instalação do Homebrew
+      debug:
+        msg: "Homebrew não encontrado. Iniciando instalação..."
+
+    - name: Baixa e executa o instalador oficial do Homebrew
+      shell: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      args:
+        executable: /bin/bash
+
+    - name: Adiciona Homebrew ao PATH atual (caso necessário)
+      shell: |
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+      when: ansible_facts['os_family'] == "Darwin"
+
+- name: Garante que o brew está no PATH
+  shell: eval "$(/opt/homebrew/bin/brew shellenv)"
+  when: brew_check.rc != 0
+
+- name: Tap HashiCorp repo into Homebrew
+  command: brew tap hashicorp/tap
+  register: tap_result
+  changed_when: "'Tapped' in tap_result.stdout or 'Already tapped' not in tap_result.stdout"
+
+- name: Instala o Terraform
+  command: brew install hashicorp/tap/terraform
+  register: terraform_result
+  changed_when: "'Pouring' in terraform_result.stdout or 'Already installed' not in terraform_result.stdout"
